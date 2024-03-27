@@ -1,0 +1,112 @@
+PageLayoutExample:
+
+<PageLayoutExample@PageLayout>:
+    MainWidget:
+    BoxLayoutExample:
+    AnchorLayoutExample:
+    GridLayoutExample:
+
+
+<ScrollViewExample@ScrollView>:
+    StackLayoutExample:
+        size_hint:1,None
+        height:self.minimum_height
+
+
+<StackLayoutExample>:
+    #ledt-right , top-bottom
+    #orientation: "lr-tb"
+    #l,r,t,b
+    #padding:("20dp","20dp","20dp","20dp")
+    #h,v
+    #spacing: "20dp","20dp"
+
+<GridLayoutExample@GridLayout>:
+    #rows
+    #cols
+    cols:3
+    Button:
+        text: "A"
+        size_hint:None, 1
+        width: "60dp"
+    Button:
+        text: "B"
+    BoxLayoutExample
+    Button:
+        text: "C"
+    Button:
+        text: "D"
+        size_hint:None, 1
+        width: "60dp"
+    Button:
+        text: "E"
+    Button:
+        text: "F"
+
+
+
+
+
+<AnchorLayoutExample>:
+
+    #right, left ,center
+    anchor_x: "center"
+    #bottom,top,center
+    anchor_y: "top"
+    BoxLayout:
+        size_hint: .2,.2
+        Button:
+            text:"A"
+            #size_hint:.2,.2
+        Button:
+            text:"B"
+            #size_hint:.1,.1
+
+
+<BoxLayoutExample>
+    orientation: "horizontal"
+    Button:
+        text:"A"
+        #size_hint: .5,.5
+        size:"200dp","200dp"
+       # pos: "100dp","200dp"
+       # height:"60dp
+       #x,center_x right #y, center_y,top
+       # post_hint:{"center_y": .5}
+    BoxLayout:
+        orientation:"vertical"
+        spacing:"3dp"
+        Button:
+            text:"A"
+        Button:
+            text:"B"
+        Button:
+            text:"C"
+        Button:
+            text:"D"
+        Button:
+            text:"E"
+
+    Button:
+        text:"C"
+        #size:"200dp","200dp"
+        #pos: "100dp","200dp"
+        size_hint:None,None
+        pos_hint:{"top":.7}
+        height:"200dp"
+      #  post_hint:{"center_y":.5}
+
+
+
+<MainWidget>:
+    Button:
+        text:"Hello"
+        size:"400dp","200dp"
+        pos: "100dp","200dp"
+
+    Label:
+        text:"Hello2"
+        size:"400dp","200dp"
+        pos: "100dp","20dp"
+        color: 1,0,0,1
+
